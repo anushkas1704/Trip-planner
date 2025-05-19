@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Bhraman.AI</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="about-body">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-globe-americas"></i></div>
+                <div class="logo-text">Bhraman<span>.AI</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="tours.html">TOURS</a></li>
+                    <li><a href="explore.html">EXPLORE</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="contact.html" class="active">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <section class="about-hero">
+                <h1>Contact Us</h1>
+                <div class="breadcrumb">Home / Contact</div>
+            </section>
+
+            <section class="about-main">
+                <div class="about-row">
+                    <div class="about-img">
+                        <div class="contact-image-container">
+                            <!-- The images will be controlled by CSS animations -->
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <h3>We're Here to Help</h3>
+                        <h2>Contact Bhraman.AI</h2>
+                        <p>Have questions, feedback, or need support? Our team is ready to assist you. Fill out the form
+                            or use the details below to get in touch with us. We look forward to making your travel
+                            experience smarter and easier!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-skills" style="background:#181818;">
+                <div style="max-width:500px;margin:0 auto;">
+                    <form class="contact-form" style="display:flex;flex-direction:column;gap:18px;">
+                        <input type="text" placeholder="Your Name" required
+                            style="padding:12px;border-radius:8px;border:none;font-size:1rem;">
+                        <input type="email" placeholder="Your Email" required
+                            style="padding:12px;border-radius:8px;border:none;font-size:1rem;">
+                        <textarea placeholder="Your Message" rows="5" required
+                            style="padding:12px;border-radius:8px;border:none;font-size:1rem;"></textarea>
+                        <button type="submit" class="about-contact-btn">Send Message</button>
+                    </form>
+                    <div style="margin-top:30px;color:#bbb;">
+                        <p><i class="fas fa-map-marker-alt"></i> 2443 Oak Ridge, Omaha, OA 45065</p>
+                        <p><i class="fas fa-phone"></i> +1-207-987-4532</p>
+                        <p><i class="fas fa-envelope"></i> support@bhraman.ai</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="about-footer">
+        <div class="footer-row">
+            <div class="footer-logo">
+                <div class="logo-icon"><i class="fas fa-globe-americas"></i></div>
+                <div class="logo-text">Bhraman<span>.AI</span></div>
+            </div>
+            <div class="footer-links">
+                <h4>Our Store</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get In Touch</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 2443 Oak Ridge, Omaha, OA 45065</li>
+                    <li><i class="fas fa-phone"></i> +1-207-987-4532</li>
+                    <li><i class="fas fa-envelope"></i> support@bhraman.ai</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2023 bhraman.ai | Powered by bhraman.ai</p>
+        </div>
+    </footer>
+<!-- Add this just before the closing </body> tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.rotating-image');
+        let currentIndex = 0;
+        
+        // Function to rotate images
+        function rotateImages() {
+            // Remove active class from all images
+            images.forEach(img => img.classList.remove('active'));
+            
+            // Add active class to current image
+            images[currentIndex].classList.add('active');
+            
+            // Update index for next rotation
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        
+        // Set interval for rotation (5 seconds)
+        setInterval(rotateImages, 5000);
+    });
+</script>
+</body>
+</html>

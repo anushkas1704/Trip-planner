@@ -1,0 +1,145 @@
+@import url("base.css");
+
+.about-body {
+  background: #181818 !important;
+  color: #fff;
+}
+
+.about-hero {
+  background: #1a2238;
+  padding: 90px 0 40px 0;
+  text-align: center;
+}
+.about-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+.breadcrumb {
+  color: #d5d5d5;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.about-main {
+  background: #181818;
+  padding: 60px 0 30px 0;
+  display: flex;
+  justify-content: center;
+}
+.about-row {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 60px;
+}
+.about-img img {
+  width: 370px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+.about-content h3 {
+  color: #f77f00;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.about-content p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.about-skills {
+  background: #22223b;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.about-skills h3 {
+  color: #f77f00;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.about-skills p {
+  color: #d5d5d5;
+  margin-bottom: 35px;
+}
+.about-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.stat {
+  background: #181818;
+  border-radius: 14px;
+  padding: 30px 38px;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  min-width: 140px;
+  text-align: center;
+}
+.stat span {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #f77f00;
+}
+
+@media (max-width: 900px) {
+  .about-row {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+  .about-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .about-content {
+    width: 100%;
+  }
+  .about-stats {
+    gap: 20px;
+  }
+  .footer-row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  .about-hero h1 {
+    font-size: 2.2rem;
+  }
+  .about-content h2 {
+    font-size: 1.3rem;
+  }
+  .stat span {
+    font-size: 1.3rem;
+  }
+  .about-img img {
+    max-width: 100%;
+  }
+  .about-main,
+  .about-skills {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

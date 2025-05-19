@@ -1,0 +1,221 @@
+@import url("base.css");
+
+/* Home Page Specific Styles */
+body {
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: backgroundFade 30s linear infinite;
+  z-index: -1;
+}
+
+/* Multiple background layers with crossfade effect */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: backgroundFadeNext 30s linear infinite;
+  z-index: -2;
+}
+
+@keyframes backgroundFade {
+  0% {
+    /* Great Wall of China */
+    background-image: url("https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 1;
+  }
+  8% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0;
+  }
+  12.01%,
+  24% {
+    /* Taj Mahal */
+    background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  25%,
+  33% {
+    opacity: 1;
+  }
+  37% {
+    opacity: 0;
+  }
+  37.01%,
+  49% {
+    /* Colosseum, Rome */
+    background-image: url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  50%,
+  58% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 0;
+  }
+  62.01%,
+  74% {
+    /* Christ the Redeemer, Brazil */
+    background-image: url("https://images.unsplash.com/photo-1564659907532-6b5f98c8e70f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  75%,
+  83% {
+    opacity: 1;
+  }
+  87% {
+    opacity: 0;
+  }
+  87.01%,
+  98% {
+    /* Eiffel Tower, Paris */
+    background-image: url("https://images.unsplash.com/photo-1543349689-9a4d426bee8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  99%,
+  100% {
+    background-image: url("https://images.unsplash.com/photo-1543349689-9a4d426bee8e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 1;
+  }
+}
+
+@keyframes backgroundFadeNext {
+  0%,
+  8% {
+    /* Taj Mahal */
+    background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  12%,
+  24% {
+    opacity: 1;
+  }
+  25%,
+  33% {
+    /* Colosseum, Rome */
+    background-image: url("https://images.unsplash.com/photo-1552832230-c0197dd311b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  37%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  58% {
+    /* Machu Picchu */
+    background-image: url("https://images.unsplash.com/photo-1526392060635-9d6019884377?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  62%,
+  74% {
+    opacity: 1;
+  }
+  75%,
+  83% {
+    /* Petra, Jordan */
+    background-image: url("https://images.unsplash.com/photo-1579606192839-efac5af20875?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+  87%,
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    /* Great Wall of China */
+    background-image: url("https://images.unsplash.com/photo-1508804185872-d7badad00f7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80");
+    opacity: 0;
+  }
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px 5%;
+  position: relative;
+}
+
+.hero-content {
+  text-align: center;
+  padding-top: 100px;
+  max-width: 800px;
+}
+
+.travel-website-tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  font-size: 1.1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .hero-content {
+    max-width: 90%;
+    padding-top: 50px;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
